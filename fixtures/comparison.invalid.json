@@ -1,0 +1,33 @@
+{
+  "matches": [
+    { "targetId": "t_html", "userNodeId": "u_html", "confidence": 0.95 },
+    { "targetId": "t_html", "userNodeId": "u_js", "confidence": 1.4 }
+  ],
+  "gaps": [
+    {
+      "targetId": "t_engineering",
+      "suggestedUserParentId": "u_root",
+      "reason": "",
+      "selfCheck": ["", "   "],
+      "links": [{ "title": "危险链接", "url": "javascript:alert(1)" }],
+      "priority": "urgent"
+    },
+    {
+      "targetId": "t_bundler",
+      "suggestedUserParentId": "u_does_not_exist",
+      "reason": "这是工程化的后代，应当被丢弃。",
+      "selfCheck": [],
+      "links": [],
+      "priority": "high"
+    },
+    {
+      "targetId": "t_unknown",
+      "suggestedUserParentId": null,
+      "reason": "未知目标节点，应当被丢弃。",
+      "selfCheck": [],
+      "links": [],
+      "priority": "medium"
+    }
+  ],
+  "extras": [{ "userNodeId": "u_unknown", "reason": "未知用户节点" }]
+}

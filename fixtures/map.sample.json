@@ -1,0 +1,44 @@
+{
+  "id": "map_sample",
+  "title": "我的前端知识",
+  "updatedAt": "2026-11-13T00:00:00.000Z",
+  "root": {
+    "id": "u_root",
+    "topic": "我的前端知识",
+    "children": [
+      {
+        "id": "u_html",
+        "topic": "HTML / CSS",
+        "children": [
+          { "id": "u_semantic", "topic": "语义化", "children": [] },
+          { "id": "u_flex", "topic": "Flex / Grid", "children": [] },
+          { "id": "u_responsive", "topic": "响应式布局", "children": [] }
+        ]
+      },
+      {
+        "id": "u_js",
+        "topic": "JavaScript",
+        "children": [
+          { "id": "u_closure", "topic": "闭包", "children": [] },
+          { "id": "u_event", "topic": "事件循环", "children": [] },
+          { "id": "u_esm", "topic": "ES Modules", "children": [] }
+        ]
+      },
+      {
+        "id": "u_react",
+        "topic": "React",
+        "children": [
+          { "id": "u_hooks", "topic": "Hooks", "children": [] },
+          { "id": "u_state", "topic": "状态管理", "children": [] }
+        ]
+      },
+      {
+        "id": "u_visual",
+        "topic": "可视化",
+        "children": [
+          { "id": "u_canvas", "topic": "Canvas", "children": [] }
+        ]
+      }
+    ]
+  }
+}

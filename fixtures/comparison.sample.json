@@ -1,0 +1,62 @@
+{
+  "id": "cmp_sample",
+  "createdAt": "2026-11-13T00:00:00.000Z",
+  "mapSignature": "…",
+  "targetSignature": "…",
+  "matches": [
+    { "targetId": "t_html", "userNodeId": "u_html", "confidence": 0.95 },
+    { "targetId": "t_semantic", "userNodeId": "u_semantic", "confidence": 0.9 },
+    { "targetId": "t_layout", "userNodeId": "u_flex", "confidence": 0.88 },
+    { "targetId": "t_responsive", "userNodeId": "u_responsive", "confidence": 0.85 },
+    { "targetId": "t_js", "userNodeId": "u_js", "confidence": 0.93 },
+    { "targetId": "t_closure", "userNodeId": "u_closure", "confidence": 0.92 },
+    { "targetId": "t_event", "userNodeId": "u_event", "confidence": 0.9 },
+    { "targetId": "t_esm", "userNodeId": "u_esm", "confidence": 0.86 },
+    { "targetId": "t_react", "userNodeId": "u_react", "confidence": 0.94 },
+    { "targetId": "t_hooks", "userNodeId": "u_hooks", "confidence": 0.9 },
+    { "targetId": "t_state", "userNodeId": "u_state", "confidence": 0.87 }
+  ],
+  "gaps": [
+    {
+      "signature": "sig_engineering",
+      "targetId": "t_engineering",
+      "suggestedParentId": "u_root",
+      "topic": "工程化",
+      "reason": "你的图里有模块化，但没有从构建到发布的链路。补上后能解释打包、热更新、测试与上线。",
+      "selfCheck": ["能配置 Vite 的生产构建吗？", "能解释 content hash 的作用吗？"],
+      "links": [{ "title": "Vite 官方文档", "url": "https://vite.dev/guide/" }],
+      "priority": "high",
+      "nodeCount": 5,
+      "status": "pending"
+    },
+    {
+      "signature": "sig_perf",
+      "targetId": "t_perf",
+      "suggestedParentId": "u_js",
+      "topic": "性能",
+      "reason": "还没有性能相关的节点。补上后能定位首屏慢与包体积过大的问题。",
+      "selfCheck": ["能区分强缓存与协商缓存吗？"],
+      "links": [],
+      "priority": "medium",
+      "nodeCount": 3,
+      "status": "pending"
+    },
+    {
+      "signature": "sig_collab",
+      "targetId": "t_collab",
+      "suggestedParentId": null,
+      "topic": "协作",
+      "reason": "目标体系要求团队交付能力，你的导图里没有体现。",
+      "selfCheck": ["能发起一次规范的 PR 吗？"],
+      "links": [],
+      "priority": "low",
+      "nodeCount": 3,
+      "status": "pending"
+    }
+  ],
+  "extras": [
+    { "userNodeId": "u_visual", "reason": "目标体系未覆盖可视化，这是你的额外兴趣。" }
+  ],
+  "stats": { "targetNodes": 22, "matchedNodes": 11, "gapNodes": 11, "coverage": 0.5 },
+  "model": { "host": "api.example.com", "model": "example-model" }
+}

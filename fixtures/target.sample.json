@@ -1,0 +1,72 @@
+{
+  "id": "target_sample",
+  "title": "前端开发知识体系",
+  "updatedAt": "2026-11-13T00:00:00.000Z",
+  "source": "template",
+  "templateId": "frontend",
+  "root": {
+    "id": "t_root",
+    "topic": "前端开发",
+    "note": "能独立完成一个中等复杂度的 Web 应用",
+    "children": [
+      {
+        "id": "t_html",
+        "topic": "HTML / CSS",
+        "note": "能写出语义化、响应式的页面",
+        "children": [
+          { "id": "t_semantic", "topic": "语义化", "note": "正确使用语义标签与文档大纲", "children": [] },
+          { "id": "t_layout", "topic": "Flex / Grid", "note": "能用现代布局实现常见页面结构", "children": [] },
+          { "id": "t_responsive", "topic": "响应式", "note": "能用媒体查询与流式布局适配多端", "children": [] }
+        ]
+      },
+      {
+        "id": "t_js",
+        "topic": "JavaScript",
+        "note": "掌握语言核心与异步模型",
+        "children": [
+          { "id": "t_closure", "topic": "闭包", "note": "理解作用域与闭包的实际用途", "children": [] },
+          { "id": "t_event", "topic": "事件循环", "note": "能解释宏任务、微任务与渲染时机", "children": [] },
+          { "id": "t_esm", "topic": "模块化", "note": "理解 ESM 与 CommonJS 的差异", "children": [] }
+        ]
+      },
+      {
+        "id": "t_react",
+        "topic": "React",
+        "note": "能用组件与 Hooks 组织界面",
+        "children": [
+          { "id": "t_hooks", "topic": "Hooks", "note": "能正确使用 useState、useEffect 等", "children": [] },
+          { "id": "t_state", "topic": "状态管理", "note": "能选择合适的状态管理方案", "children": [] }
+        ]
+      },
+      {
+        "id": "t_engineering",
+        "topic": "工程化",
+        "note": "能配置构建、测试与发布链路",
+        "children": [
+          { "id": "t_bundler", "topic": "构建工具", "note": "能配置 Vite 的生产构建", "children": [] },
+          { "id": "t_test", "topic": "测试", "note": "能写单元与组件测试", "children": [] },
+          { "id": "t_deploy", "topic": "部署", "note": "能解释 content hash 与缓存策略", "children": [] },
+          { "id": "t_ci", "topic": "CI", "note": "能配置基础的自动化流水线", "children": [] }
+        ]
+      },
+      {
+        "id": "t_perf",
+        "topic": "性能",
+        "note": "能定位并优化常见性能问题",
+        "children": [
+          { "id": "t_cache", "topic": "HTTP 缓存", "note": "理解强缓存与协商缓存", "children": [] },
+          { "id": "t_bundle", "topic": "包体积", "note": "能做代码分割与懒加载", "children": [] }
+        ]
+      },
+      {
+        "id": "t_collab",
+        "topic": "协作",
+        "note": "能在团队中规范地交付代码",
+        "children": [
+          { "id": "t_git", "topic": "Git 工作流", "note": "能使用分支与 PR 协作", "children": [] },
+          { "id": "t_review", "topic": "代码评审", "note": "能给出与接受评审意见", "children": [] }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "title": "前端开发知识体系",
+  "root": {
+    "topic": "前端开发",
+    "note": "能独立完成一个中等复杂度的 Web 应用",
+    "children": [
+      {
+        "topic": "HTML / CSS",
+        "note": "能写出语义化、响应式的页面",
+        "children": [
+          { "topic": "语义化", "note": "正确使用语义标签与文档大纲", "children": [] },
+          { "topic": "布局", "note": "能用 Flex 与 Grid 实现常见结构", "children": [] }
+        ]
+      },
+      {
+        "topic": "JavaScript",
+        "note": "掌握语言核心与异步模型",
+        "children": [
+          { "topic": "作用域与闭包", "note": "理解词法作用域与闭包用途", "children": [] }
+        ]
+      }
+    ]
+  }
+}

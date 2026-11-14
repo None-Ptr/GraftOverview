@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paper — cool white, not #fff */
+  --color-paper: oklch(98.5% 0.004 250);
+  --color-paper-2: oklch(96.5% 0.006 250);
+  --color-paper-3: oklch(93.5% 0.008 250);
+  --color-rule: oklch(90% 0.008 250);
+  --color-rule-2: oklch(84% 0.010 250);
+  --color-grid: oklch(95.5% 0.006 250);
+
+  /* Ink — cool charcoal, not #000 */
+  --color-ink: oklch(24% 0.020 258);
+  --color-ink-2: oklch(34% 0.018 257);
+  --color-muted: oklch(52% 0.012 255);
+  --color-neutral: oklch(64% 0.010 255);
+
+  /* Signal — the single decorative accent */
+  --color-accent: oklch(54% 0.20 256);
+  --color-accent-hover: oklch(50% 0.20 256);
+  --color-accent-active: oklch(46% 0.19 256);
+  --color-accent-ink: oklch(99% 0.004 250);
+  --color-accent-surface: oklch(95% 0.03 256);
+  --color-focus: oklch(54% 0.20 256);
+
+  /* Semantic diff — functional colors, always paired with text/icons */
+  --color-matched: oklch(50% 0.09 170);
+  --color-matched-ink: oklch(38% 0.08 170);
+  --color-matched-surface: oklch(95% 0.02 170);
+  --color-gap: oklch(58% 0.15 65);
+  --color-gap-ink: oklch(38% 0.10 65);
+  --color-gap-surface: oklch(95% 0.035 75);
+  --color-error: oklch(55% 0.19 25);
+  --color-error-surface: oklch(95% 0.03 25);
+
+  /* Graphite — root node and dark blocks */
+  --color-graphite: oklch(22% 0.016 260);
+  --color-graphite-2: oklch(26% 0.016 260);
+  --color-on-graphite: oklch(94% 0.006 250);
+  --color-on-graphite-muted: oklch(78% 0.010 250);
+
+  /* Type — 3 families is the ceiling */
+  --font-display: "Space Grotesk", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-body: "Inter", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  --text-2xs: 0.6875rem; /* 11px — mono labels */
+  --text-xs: 0.75rem; /* 12px — meta/tags */
+  --text-sm: 0.8125rem; /* 13px — dense UI */
+  --text-base: 0.875rem; /* 14px — app body */
+  --text-md: 1rem; /* 16px — prose */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.5rem; /* 24px */
+  --text-2xl: 2rem; /* 32px */
+
+  --leading-display: 1.1;
+  --leading-ui: 1.35;
+  --leading-body: 1.55;
+
+  /* 4pt spacing scale — same names as Tailwind spacing utilities */
+  --spacing-3xs: 0.125rem; /* 2 */
+  --spacing-2xs: 0.25rem; /* 4 */
+  --spacing-xs: 0.5rem; /* 8 */
+  --spacing-sm: 0.75rem; /* 12 */
+  --spacing-md: 1rem; /* 16 */
+  --spacing-lg: 1.5rem; /* 24 */
+  --spacing-xl: 2.5rem; /* 40 */
+  --spacing-2xl: 4rem; /* 64 */
+  --spacing-3xl: 6rem; /* 96 */
+
+  --radius-control: 6px;
+  --radius-panel: 8px;
+  --radius-sheet: 12px;
+  --radius-pill: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --shadow-whisper: 0 1px 2px oklch(24% 0.02 258 / 0.06);
+  --shadow-dialog: 0 18px 48px oklch(24% 0.02 258 / 0.16);
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}
+
+/* Dark only changes lightness and chroma, never hue; higher surfaces are lighter. */
+html[data-theme="dark"] {
+  --color-paper: oklch(16% 0.012 258);
+  --color-paper-2: oklch(19.5% 0.014 258);
+  --color-paper-3: oklch(23% 0.014 258);
+  --color-rule: oklch(30% 0.012 258);
+  --color-rule-2: oklch(38% 0.012 258);
+  --color-grid: oklch(21% 0.008 258);
+
+  --color-ink: oklch(94% 0.006 250);
+  --color-ink-2: oklch(82% 0.008 250);
+  --color-muted: oklch(68% 0.010 255);
+  --color-neutral: oklch(52% 0.010 255);
+
+  --color-accent: oklch(68% 0.16 256);
+  --color-accent-hover: oklch(72% 0.16 256);
+  --color-accent-active: oklch(76% 0.15 256);
+  --color-accent-ink: oklch(16% 0.02 258);
+  --color-accent-surface: oklch(24% 0.04 256);
+  --color-focus: oklch(72% 0.16 256);
+
+  --color-matched: oklch(70% 0.08 170);
+  --color-matched-ink: oklch(84% 0.06 170);
+  --color-matched-surface: oklch(22% 0.03 170);
+  --color-gap: oklch(78% 0.12 75);
+  --color-gap-ink: oklch(86% 0.08 75);
+  --color-gap-surface: oklch(24% 0.035 75);
+  --color-error: oklch(70% 0.16 25);
+  --color-error-surface: oklch(24% 0.04 25);
+
+  --color-graphite: oklch(22% 0.016 260);
+  --color-graphite-2: oklch(26% 0.016 260);
+  --color-on-graphite: oklch(94% 0.006 250);
+  --color-on-graphite-muted: oklch(78% 0.010 250);
+
+  --shadow-whisper: 0 1px 2px oklch(8% 0.01 258 / 0.4);
+  --shadow-dialog: 0 18px 48px oklch(8% 0.01 258 / 0.5);
+}
+
+html {
+  color-scheme: light;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+html,
+body {
+  overflow-x: clip;
+}
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink-2);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+#app {
+  height: 100dvh;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: inherit;
+}
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 150ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 150ms !important;
+  }
+}
